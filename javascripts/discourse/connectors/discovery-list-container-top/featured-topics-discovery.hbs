@@ -2,8 +2,10 @@
   {{#if featuredTopics}}
     {{tlp-featured-topics featuredTopics=featuredTopics}}
     <div class="actions-and-meta-data">
-          {{raw "list/topic-actions" likeCount=likeCount topicActions=topicActions}}
+        {{#if showActions}}
+        {{raw "list/topic-actions" likeCount=likeCount topicActions=topicActions}}
+        {{/if}}
         {{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="heart"}}
-      </div>
+    </div>
   {{/if}}
 {{/if}}
