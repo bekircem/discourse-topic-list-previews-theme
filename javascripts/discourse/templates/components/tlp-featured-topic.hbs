@@ -10,9 +10,7 @@
       </div>
     {{/if}}
     <span class="user">
-      {{#if showActions}}
-        {{raw "list/topic-actions" likeCount=likeCount topicActions=topicActions}}
-      {{/if}}
+      {{raw "list/topic-actions" likeCount=likeCount topicActions=topicActions}}
       {{featuredUsername}}
       {{avatar featuredUser imageSize="small"}}
     </span>
