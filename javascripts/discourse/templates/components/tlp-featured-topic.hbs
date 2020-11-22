@@ -4,7 +4,14 @@
     <div class="title">
       {{topic.title}}
     </div>
-    <div class="like-count">{{likeCount}}test</div>
+    <div class="topic-actions">
+      {{#if likeCount}}
+         <div class="like-count">{{likeCount}}</div>
+      {{/if}}
+      {{#each topicActions as |action|}}
+         {{list-button action}}
+      {{/each}}
+    </div>
     {{#if featuredExcerpt}}
       <div class="excerpt">
         {{{featuredExcerpt}}}
