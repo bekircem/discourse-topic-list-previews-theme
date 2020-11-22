@@ -2,16 +2,9 @@
   {{preview-unbound topic.thumbnails opts=(hash featured=true)}}
   <div class="content">
     <div class="title">
-      {{topic.title}}
+      {{topic.title}} {{number topic.like_count}} {{d-icon 'heart'}}
     </div>
-    <div class="topic-actions">
-      {{#if likeCount}}
-         <div class="like-count">{{likeCount}}</div>
-      {{/if}}
-      {{#each topicActions as |action|}}
-         {{list-button action}}
-      {{/each}}
-    </div>
+    
     {{#if featuredExcerpt}}
       <div class="excerpt">
         {{{featuredExcerpt}}}
