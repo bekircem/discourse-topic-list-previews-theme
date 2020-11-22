@@ -336,6 +336,7 @@ button.list-button {
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
+    justify-content: space-around;
 
     .tlp-featured-topic {
 
